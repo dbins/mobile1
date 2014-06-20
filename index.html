@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, target-densitydpi=medium-dpi" />
+		<link rel="stylesheet" href="css/jquery.mobile-1.4.2.min.css">
+        <title>Sistema Teste</title>
+    </head>
+    <body>
+        <div id="app">
+            <div data-role="page" id="pageone">
+			   <div data-role="panel" id="overlayPanel" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" id="main" class="ui-content">
+				<p>Sistema de testes Mobile</p>
+				<p>Desenvolvido com Phonegap</p>
+			  </div>
+
+			  <div data-role="footer" data-position="fixed">
+				<h1>Sistema Teste</h1>
+			  </div>
+			</div> 
+
+			<div data-role="page" id="noticias">
+			  <div data-role="panel" id="overlayPanel1" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel1" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				<div id="content_news" data-role="collapsibleset">
+				</div>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Noticias</h1>
+			  </div>
+			</div> 
+
+			<div data-role="page" id="cotacao">
+			  <div data-role="panel" id="overlayPanel2" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel2" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				<h2>Cotação de hoje:</h2>
+				<ul id="content_list_cotacao" data-role="listview">
+				</ul>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Cotação</h1>
+			  </div>
+			</div> 
+
+
+			<div data-role="page" id="conversor">
+			  <div data-role="panel" id="overlayPanel3" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel3" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				 <form id="check_conversao" data-ajax="false">
+				  <fieldset class="ui-field-contain">
+					<label for="tipo_conversao">Escolha o tipo de conversão</label>
+					<select name="tipo_conversao" id="tipo_conversao">
+					  <option value="1">Real para Dolar</option>
+					  <option value="2">Real para Euro</option>
+					  <option value="3">Euro para Real</option>
+					  <option value="4">Dolar para Real</option>
+					</select>
+				  </fieldset>
+				  <label for="valor_conversao">Digite o Valor</label>
+				  <input type="text" name="valor_conversao" id="valor_conversao" placeholder="Valor.." data-clear-btn="true">
+				  <input type="submit" id="calcular_conversao" data-inline="true" value="Calcular">
+				</form>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Conversor</h1>
+			  </div>
+			</div> 
+
+
+			<div data-role="page" id="tabela">
+			 <div data-role="panel" id="overlayPanel4" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel4" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				<p>Tabela de Licenciamento.</p>
+				<table data-role="table" class="ui-responsive">
+				  <thead>
+					<tr>
+					  <th>Final da Placa</th>
+					  <th>Mes</th>
+					</tr>
+				  </thead>
+				  <tbody>
+					<tr>
+					  <td>1</td>
+					  <td>ABRIL</td>
+					</tr>
+					<tr>
+					  <td>2</td>
+					  <td>MAIO</td>
+					</tr>
+					<tr>
+					  <td>3</td>
+					  <td>JUNHO</td>
+					</tr>
+					<tr>
+					  <td>4</td>
+					  <td>JULHO</td>
+					</tr>
+					<tr>
+					  <td>5 e 6</td>
+					  <td>AGOSTO</td>
+					</tr>
+					<tr>
+					  <td>7</td>
+					  <td>SETEMBRO</td>
+					</tr>
+					<tr>
+					  <td>8</td>
+					  <td>OUTUBRO</td>
+					</tr>
+					<tr>
+					  <td>9</td>
+					  <td>NOVEMBRO</td>
+					</tr>
+					<tr>
+					  <td>0</td>
+					  <td>DEZEMBRO</td>
+					</tr>
+				  </tbody>
+				</table>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Tabela</h1>
+			  </div>
+			</div>
+
+
+			<div data-role="page" id="faleconosco">
+			 <div data-role="panel" id="overlayPanel5" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel5" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				<p>Mande sua mensagem. Entraremos em contato em breve!</p>
+				  <form id="check-contato" data-ajax="false">
+				  <div class="ui-field-contain">
+					<label for="fullname">Seu nome:</label>
+					<input type="text" name="nome_contato" id="nome_contato">       
+					<label for="email">E-mail:</label>
+					<input type="email" name="email_contato" id="email_contato" placeholder="Seu email..">
+					
+					<label for="info">Sua mensagem:</label>
+					<textarea name="mensagem_contato" id="mensagem_contato"></textarea>
+				  </div>
+				  <input type="submit" data-inline="true" id="enviar_contato" value="Enviar">
+				</form>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Fale Conosco</h1>
+			  </div>
+			</div>
+
+			<div data-role="page" id="telefone">
+			  <div data-role="panel" id="overlayPanel6" data-display="overlay"> 
+				<h2>Menu</h2>
+				<a href="#noticias" class="ui-btn">Noticias</a>
+				 <a href="#cotacao" class="ui-btn">Cotação</a>
+				 <a href="#conversor" class="ui-btn">Conversor</a>
+				 <a href="#tabela" class="ui-btn">Tabela</a>
+				 <a href="#faleconosco" class="ui-btn">Fale Conosco</a>
+				 <a href="#telefone" class="ui-btn">Info sobre o telefone</a>
+			  </div> 
+			  
+			  <div data-role="header" data-position="fixed">
+				 <div data-role="controlgroup" data-type="horizontal">
+				 <a href="#pageone" class="ui-btn ui-corner-all ui-shadow ui-icon-home ui-btn-icon-left">Home</a>
+				 <a href="#overlayPanel6" class="ui-btn ui-corner-all ui-shadow ui-btn-icon-left">Menu</a>
+				 </div>
+			  </div>
+
+			  <div data-role="main" class="ui-content">
+				<p>Informações sobre o dispositivo</p>
+			  </div>
+
+			  <div data-role="footer">
+				<h1>Dados deste Telefone</h1>
+				<div id="deviceProperties"></div>
+			  </div>
+			</div>
+
+        </div>
+		<script type="text/javascript" src="libs/fastclick.min.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script src="js/jquery-1.10.2.min.js"></script>
+		<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script src="js/scripts.js"></script>
+    </body>
+</html>
