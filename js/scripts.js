@@ -34,7 +34,7 @@
 			celular_uuid = device.uuid;
 			celular_versao = device.version;
 			
-			$("#content_news").append(conteudo);					
+			$("#deviceProperties").append(conteudo);					
 		}
 		
 		function networkDetection() {
@@ -248,7 +248,7 @@
 				// action is functionality we want to call and outputJSON is our data
 				//formData : $('#check-contato').serialize()
 					$.ajax({url: 'http://www.gotasdecidadania.com.br/novo/programado/ajax_contato.php',
-						data: {action : 'enviar', nome: $('#nome_contato').val(), email: $('#email_contato').val(), ddd_telefone: '00', numero_telefone: '00000000', mensagem: $('#mensagem_contato').val()},
+						data: {acao : 'enviar', nome: $('#nome_contato').val(), email: $('#email_contato').val(), ddd_telefone: '00', numero_telefone: '00000000', mensagem: $('#mensagem_contato').val()},
 						type: 'post',                   
 						async: 'true',
                         dataType: 'text',
@@ -266,7 +266,6 @@
 							$.mobile.loading('hide'); // This will hide ajax spinner
 						},
 						success: function (result) {
-							alert(result);
 							if(result =="OK") {
 								alert('Obrigado por enviar sua mensagem!'); 
 								$.mobile.changePage("#pageone");							
@@ -309,8 +308,6 @@
 				var tipo = $('#tipo_conversao').val();
 				var resultado = 0;
 				var mensagem_resultado = "";
-				alert(dolar);
-				alert(tipo);
 				switch (Math.abs(tipo)) {
 				 case 1:
 					 resultado = Math.abs(valor) / Math.abs(dolar);
